@@ -15,5 +15,7 @@ This is a demo readme file for learning git.
 
   //Pe repede inainte 
   // inca o modificare in acelasi loc
+  // mai pot face modificari
+  // Modificare
 ```
 
