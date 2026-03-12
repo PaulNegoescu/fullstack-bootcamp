@@ -1,0 +1,29 @@
+{
+  "recommendations": [
+    "adpyke.codesnap",
+    "beardedbear.beardedicons",
+    "bierner.markdown-mermaid",
+    "bradgashler.htmltagwrap",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "dotjoshjohnson.xml",
+    "dsznajder.es7-react-js-snippets",
+    "ecmel.vscode-html-css",
+    "esbenp.prettier-vscode",
+    "github.copilot-chat",
+    "jock.svg",
+    "johnpapa.vscode-peacock",
+    "mgmcdermott.vscode-language-babel",
+    "mhutchie.git-graph",
+    "mikestead.dotenv",
+    "ms-azuretools.vscode-containers",
+    "ms-vscode-remote.remote-containers",
+    "prisma.prisma",
+    "quicktype.quicktype",
+    "streetsidesoftware.code-spell-checker",
+    "tinkertrain.theme-panda",
+    "usernamehw.errorlens",
+    "vue.volar",
+    "yoavbls.pretty-ts-errors"
+  ]
+}
