@@ -1,0 +1,108 @@
+{
+  // this one can be tested for a while, costs 12 bucks after long trial period
+  "workbench.colorTheme": "Panda Syntax",
+  // sets various icons for different file types in the file explorer
+  "workbench.iconTheme": "bearded-icons",
+  // this moves the sidebar to the right, might need getting used to
+  "workbench.sideBar.location": "right",
+  // chose a font for the terminal that has Powerline characters (important if using PowerLevel 10K OhMyZsh! theme)
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  // tabs on the right side of the terminal to switch terminal windows
+  "terminal.integrated.tabs.enabled": true,
+  // this sets the default terminal on Windows OS (prefer git bash especially if you use OhMyZsh!)
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.fontFamily": "'Dank Mono', Consolas, monospace",
+  // depends strongly on the font, for Dank Mono it changes === and ==, also other character combos
+  "editor.fontLigatures": true,
+  // keep snippet suggestions on top to be able to TAB complete them instead of getting text completion (e.g. log for console.log)
+  "editor.snippetSuggestions": "top",
+  // prevents code completion from words inside the file (irrelevant completions)
+  "editor.wordBasedSuggestions": "off",
+  // hides the minimap that shows a mini verion of the file
+  "editor.minimap.enabled": false,
+  // disable auto formatting on save, to be able to show stuff to students
+  "editor.formatOnSave": false,
+  // enables auto-rename of tag pairs in HTML
+  "editor.linkedEditing": true,
+  // will select the first suggestion instead of most recently used, not sure if this is actually better or not
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  // don't auto-fix eslint issues
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "never"
+  },
+  // this is important
+  "files.eol": "\n",
+  // just common convention
+  "files.insertFinalNewline": true,
+  // will only autosave on unfocus, this reduces the number of HMR triggers, good for performance
+  "files.autoSave": "onWindowChange",
+  // excludes files that are gitignored from any kind of editor help
+  "files.exclude": {
+    "USE_GITIGNORE": true
+  },
+  // prevents search from entering folders where it has nothing to find or would find duplicates
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.gh-pages": true
+  },
+  // trigger eslint validation in multiple filetypes including react files
+  "eslint.validate": [
+    "vue",
+    "react",
+    "typescript",
+    "html",
+    "javascript",
+  ],
+  // enables emmet in certain languages (languages can be individually selected for every file in the editor)
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "html": "html",
+    "css": "css",
+    "postcss": "css",
+    "vue-html": "html"
+  },
+  // preview expanded abbreviations
+  "emmet.showExpandedAbbreviation": "always",
+  // how zoomed in is the editor
+  "window.zoomLevel": 0,
+  // makes more vertical room, removes the search bar from the top
+  "window.commandCenter": false,
+  // basically behaves in a more old-fashioned way where all folders are visible individually, never grouped with parent
+  "explorer.compactFolders": false,
+  // set prettier as the default formatter for all files
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // font-size in the terminal
+  "terminal.integrated.fontSize": 15,
+  // font-size in the editor
+  "editor.fontSize": 15,
+  // this makes function signatures stick to the top of the editor while scrolling
+  "editor.stickyScroll.enabled": true,
+  // it's annoying to be asked every time...
+  "explorer.confirmDelete": false,
+  // this is for the snippets plugin, it prevents React from being imported as this is not required
+  "reactSnippets.settings.importReactOnTop": false,
+  // these setting don't work here in the project, if you want to use them you need to move them to the main VSCode config
+  "dev.containers.dockerPath": "podman",
+  "dotfiles.repository": "https://github.com/PaulNegoescu/dotfiles.git",
+  "dotfiles.targetPath": "~/dotfiles",
+  "dotfiles.installCommand": "install.sh",
+  // Some trusted JSON schemas
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://biomejs.dev": true,
+    "https://opencode.ai": true,
+    "https://models.dev": true,
+    "https://inlang.com": true
+  }
+}
