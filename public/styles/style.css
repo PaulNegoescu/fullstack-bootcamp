@@ -1,0 +1,105 @@
+.mainMenu {
+  background-color: #222;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: aqua;
+}
+/* .mainMenu.container {
+  background-color: yellow;
+} */
+
+.highlighted {
+  background-color: #bada55;
+}
+
+[href^=http]::before {
+  content: '🎲';
+  display: inline-block;
+  font-size: .8em;
+  margin-right: .5rem;
+}
+
+p::first-letter {
+  font-size: 3em;
+  float: left;
+  line-height: 1;
+  color:chocolate
+}
+
+p::first-line {
+  text-decoration: underline;
+}
+
+::selection {
+  background-color: hotpink;
+}
+
+:visited {
+  color: pink;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  border-radius: 3px;
+}
+
+input:focus {
+  outline: 2px solid hotpink;
+  outline-offset: 2px;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+body form > input {
+  border: 1px solid #222;
+}
+
+.mainMenu li + li {
+  list-style: none;
+}
+
+h1 + p {
+  color: red;
+}
+
+/* 
+  Specificity
+
+  *                                             -> 0
+  E (nav, h1, body, div), ::pseudo-elements     -> 1
+  .class (.mainMenu), [attr], :pseudo-class     -> 10
+  #id (#mainNav)                                -> 100
+*/
+
+/* 
+  Selector Combinators
+  " " (space) -> Any level descendent
+  ">"         -> Direct child
+  "+"         -> Immediately preceding sibling
+  "~"         -> Generic preceding sibling
+*/
+
+
+.mainMenu .external {
+  color: red;
+}
+
+/* 
+  Recommendations/Good Practices
+  1. Always use classes, at least to start a selector chain
+  2. Never use !important
+  3. Don't have selector chains with more than 4 selectors
+  4. Don't replicate html layout in css selectors
+  5. 3+4 Make selector chains as short as possible to solve your problem
+*/
