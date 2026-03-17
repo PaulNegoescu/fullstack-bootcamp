@@ -7,6 +7,49 @@
   </head>
   <body>
     <h1>Mare</h1>
+
+    <table border="1">
+      <caption>User List</caption>
+      <thead>
+        <tr>
+          <th rowspan="2" scope="col">User Type</th>
+          <th rowspan="2" scope="col">#</th>
+          <th colspan="2" scope="colgroup">Personal Details</th>
+          <th rowspan="2" scope="col">Actions</th>
+        </tr>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">admin</th>
+          <td>1</td>
+          <td>Paul</td>
+          <td>Negoescu</td>
+          <td><button>✏️</button><button>❌</button></td>
+        </tr>
+        <tr>
+          <th rowspan="2" scope="rowgroup">editor</th>
+          <td>2</td>
+          <td>Ioana</td>
+          <td>Bostan</td>
+          <td><button>✏️</button><button>❌</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Andreea</td>
+          <td>Popescu</td>
+          <td><button>✏️</button><button>❌</button></td>
+        </tr>
+      </tbody>
+      <tfoot>
+
+      </tfoot>
+    </table>
+
+
     <h6>mic</h6>
 
     <p>
@@ -30,7 +73,7 @@
       debitis at totam.
     </p>
     <p>
-      Itaque beatae sequi quis, <img src="public/vite.svg" alt="Text alternativ imagine" /> excepturi pariatur quasi expedita. Modi,
+      Itaque beatae sequi quis, <img src="vite.svg" alt="Text alternativ imagine" /> excepturi pariatur quasi expedita. Modi,
       similique alias et eos blanditiis reiciendis at est tempore perspiciatis
       ullam recusandae cumque voluptate minus obcaecati consequuntur. Dicta
       debitis at totam.
@@ -50,7 +93,7 @@
     <p>
       Neque, facilis magni culpa accusamus iure ad! Corrupti placeat repellendus
       consectetur
-      <a href="https://google.com" target="_blank"
+      <a href="https://google.com" target="_blank" rel="noopener noreferer"
         >dignissimos suscipit fugiat aliquam</a
       >
       asperiores modi aut cumque! Velit voluptatem quisquam doloribus maiores
@@ -130,18 +173,16 @@
         <button type="button">This is for JS</button>
         <button type="submit">Submit the form</button>
       </div>
-
-      <nav>Sectiune de navigare suporta titlu</nav>
-      <article>Un articol sau continut de sine statator cu titlu</article>
-      <section>O sectiune de pagina care suporta titlu dar nu e mai specifica</section>
-      <aside>O sectiune care descrie continului adaugand informatie extra, suporta titlu</aside>
-
-      <main>Delimiteaza continutul unic din pagina al site-ului, nu are titlu!!!!</main>
-
-      <header>ante†t pentru pagina sau un article sau un section sau un aside</header>
-      <footer>--- " ---, nu sunt facute sa aiba propriul titlu</footer>
     </form>
 
-    <table></table>
+    <nav>Sectiune de navigare suporta titlu</nav>
+    <article>Un articol sau continut de sine statator cu titlu</article>
+    <section>O sectiune de pagina care suporta titlu dar nu e mai specifica</section>
+    <aside>O sectiune care descrie continului adaugand informatie extra, suporta titlu</aside>
+
+    <main>Delimiteaza continutul unic din pagina al site-ului, nu are titlu!!!!</main>
+
+    <header>ante†t pentru pagina sau un article sau un section sau un aside</header>
+    <footer>--- " ---, nu sunt facute sa aiba propriul titlu</footer>
   </body>
 </html>
