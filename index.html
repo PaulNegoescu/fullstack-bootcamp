@@ -2,11 +2,146 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullstack Bootcamp</title>
+    <title>Document</title>
   </head>
   <body>
-    <div id="app"></div>
+    <h1>Mare</h1>
+    <h6>mic</h6>
+
+    <p>
+      Lorem, <strong>ipsum dolor sit</strong> amet consectetur
+      <em>adipisicing elit</em>. Perferendis consectetur doloribus nam ad nobis
+      dolores sed dicta dolor, quas repudiandae
+      <a href="about.html">blanditiis velit pariatur</a> inventore eius id,
+      porro, iure aspernatur obcaecati?
+    </p>
+    <p>
+      Itaque beatae sequi quis, <a href="#mainMenu">excepturi pariatur quasi</a> expedita. Modi,
+      similique alias et eos blanditiis reiciendis at est tempore perspiciatis
+      ullam recusandae cumque voluptate minus obcaecati       
+                  consequuntur. Dicta
+      debitis at totam.
+    </p>
+    <p>
+      Itaque beatae sequi quis, excepturi pariatur quasi expedita. Modi,
+      similique alias et eos blanditiis reiciendis at est tempore perspiciatis
+      ullam recusandae cumque voluptate minus obcaecati consequuntur. Dicta
+      debitis at totam.
+    </p>
+    <p>
+      Itaque beatae sequi quis, <img src="public/vite.svg" alt="Text alternativ imagine" /> excepturi pariatur quasi expedita. Modi,
+      similique alias et eos blanditiis reiciendis at est tempore perspiciatis
+      ullam recusandae cumque voluptate minus obcaecati consequuntur. Dicta
+      debitis at totam.
+    </p>
+    <p>
+      Itaque beatae sequi quis, excepturi pariatur quasi expedita. Modi,
+      similique alias et eos blanditiis reiciendis at est tempore perspiciatis
+      ullam recusandae cumque voluptate minus obcaecati consequuntur. Dicta
+      debitis at totam.
+    </p>
+    <p>
+      Itaque beatae sequi quis, excepturi pariatur quasi expedita. Modi,
+      similique alias et eos blanditiis reiciendis at est tempore perspiciatis
+      ullam recusandae cumque voluptate minus obcaecati consequuntur. Dicta
+      debitis at totam.
+    </p>
+    <p>
+      Neque, facilis magni culpa accusamus iure ad! Corrupti placeat repellendus
+      consectetur
+      <a href="https://google.com" target="_blank"
+        >dignissimos suscipit fugiat aliquam</a
+      >
+      asperiores modi aut cumque! Velit voluptatem quisquam doloribus maiores
+      debitis exercitationem sapiente mollitia adipisci quia!
+    </p>
+
+    <ol type="i" reversed>
+      <li>
+        Relative local URLs: ./whatever.html OR whatever.html OR
+        ../whatever.html OR google.com
+      </li>
+      <li>Absolute local URLs: /whatever.html OR /folder/whatever.html</li>
+      <li>Absolute web URLs: http://google.com</li>
+    </ol>
+
+    <ul>
+      <li>Elementul 1</li>
+      <li>Elementul 2</li>
+      <li>Elementul 3</li>
+    </ul>
+
+    <menu id="mainMenu">
+      <li><a href="#">Menu item 1</a></li>
+      <li><a href="#">Menu item 2</a></li>
+      <li><a href="#">Menu item 3</a></li>
+      <li><a href="#">Menu item 4</a></li>
+    </menu>
+
+    <form action="about.html" method="post">
+      <div>
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" value="Paul">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div>
+        <label for="password">Pass</label>
+        <input type="password" id="password" name="parola">
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="number" id="age" min="0" max="200" step=".5" name="varsta">
+      </div>
+      <div>
+        <label for="culoare">Culoare</label>
+        <input type="color" id="culoare" name="culoare">
+      </div>
+      <div>
+        <span>Gender</span>
+        <label><input type="radio" name="gen" value="M">Male</label>
+        <label><input type="radio" name="gen" value="F" checked>Female</label>
+        <label><input type="radio" name="gen" value="O">Other</label>
+      </div>
+      <div>
+        <span>Favorite Planets</span>
+        <label><input type="checkbox" name="planet" value="Mercury">Mercur</label>
+        <label><input type="checkbox" name="planet" value="Venus" checked>Venus</label>
+        <label><input type="checkbox" name="planet" value="Earth">Pamant</label>
+      </div>
+      <div>
+        <label for="gender">Genul 2</label>
+        <select name="gen2" id="gender">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O" selected>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea name="mesaj" id="message" cols="50" rows="10"></textarea>
+      </div>
+      
+      <div>
+        <button type="reset">Reset the form</button>
+        <button type="button">This is for JS</button>
+        <button type="submit">Submit the form</button>
+      </div>
+
+      <nav>Sectiune de navigare suporta titlu</nav>
+      <article>Un articol sau continut de sine statator cu titlu</article>
+      <section>O sectiune de pagina care suporta titlu dar nu e mai specifica</section>
+      <aside>O sectiune care descrie continului adaugand informatie extra, suporta titlu</aside>
+
+      <main>Delimiteaza continutul unic din pagina al site-ului, nu are titlu!!!!</main>
+
+      <header>ante†t pentru pagina sau un article sau un section sau un aside</header>
+      <footer>--- " ---, nu sunt facute sa aiba propriul titlu</footer>
+    </form>
+
+    <table></table>
   </body>
 </html>
