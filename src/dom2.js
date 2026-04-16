@@ -18,6 +18,7 @@ for (const todo of prevData) {
 }
 
 addTodoForm.addEventListener('submit', handleAddTodo);
+todoList.addEventListener('change', handleCompleteTodo);
 
 function handleAddTodo(e) {
   e.preventDefault();
@@ -43,14 +44,17 @@ function createTodoFromTemplate(todo, todoTemplate) {
   const input = todoElem.querySelector('input');
   input.dataset.todoId = todo.id;
   input.checked = todo.completed;
-  input.addEventListener('change', handleCompleteTodo);
 
   return todoElem;
 }
 
 function handleCompleteTodo(e) {
-  const checkbox = e.target;
+  const checkbox = e.target;  
   const todoId = Number(checkbox.dataset.todoId);
+
+  if(!todoId) {
+    return;
+  }
 
   const todoToChange = prevData.find(
     (todoObj) => todoObj.id === todoId,
