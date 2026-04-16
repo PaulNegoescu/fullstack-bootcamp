@@ -25,13 +25,13 @@ function handleAddTodo(e) {
   const formData = new FormData(e.target);
   const title = formData.get('title');
 
-  const newTodo = { title, completed: false };
+  const newTodo = { id: prevData.length, title, completed: false };
 
   prevData.push(newTodo);
 
   localStorage.setItem(storageKey, JSON.stringify(prevData));
   // const todoElement = createTodoElement(formData.get('title'));
- 
+
   const todoElement = createTodoFromTemplate(newTodo, todoTemplate);
 
   todoList.append(todoElement);
@@ -40,8 +40,23 @@ function handleAddTodo(e) {
 function createTodoFromTemplate(todo, todoTemplate) {
   const todoElem = todoTemplate.cloneNode(true);
   todoElem.querySelector('label').append(todo.title);
+  const input = todoElem.querySelector('input');
+  input.dataset.todoId = todo.id;
+  input.checked = todo.completed;
+  input.addEventListener('change', handleCompleteTodo);
 
   return todoElem;
+}
+
+function handleCompleteTodo(e) {
+  const checkbox = e.target;
+  const todoId = Number(checkbox.dataset.todoId);
+
+  const todoToChange = prevData.find(
+    (todoObj) => todoObj.id === todoId,
+  );
+  todoToChange.completed = !todoToChange.completed;
+  localStorage.setItem(storageKey, JSON.stringify(prevData));
 }
 
 function createTodoElement(title) {
