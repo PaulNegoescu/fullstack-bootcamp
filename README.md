@@ -25,6 +25,12 @@ A beginner-friendly repository for learning and experimenting with HTML, CSS, an
    # or if you prefer npm: npm install
    ```
 
+3. **Create env file**
+   Create a file called `.env.local` and add the following content:
+   ```bash
+   VITE_OWM_API_KEY=<your_open_weather_map_api_key>
+   ```
+
 4. **Start the development server:**
    ```bash
    pnpm run dev
