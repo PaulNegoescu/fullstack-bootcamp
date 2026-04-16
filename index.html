@@ -5,38 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fullstack Bootcamp</title>
 
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
-
-    <!-- <script src="src/main.js" defer></script>
-    <script src="src/complex-data-types.js" defer></script>
-    <script src="src/array-exercises.js" defer></script> -->
-    <script src="src/dom.js" type="module"></script>
-    <script src="src/dom2.js" type="module"></script>
+    <script src="src/weather.js" type="module"></script>
   </head>
   <body>
-    <output data-counter-display>0</output>
-    <div>
-      <button data-counter-button="decrement">-</button>
-      <button data-counter-button="reset">Reset</button>
-      <button data-counter-button="increment"><span>+</span></button>
-    </div>
+    <h1>Weather</h1>
 
-    <hr />
-
-    <form data-todo-form>
-      <label for="title">What do you want to do?</label>
-      <input type="text" id="title" name="title" />
-      <button type="submit">
-        Add Todo
-      </button>
-    </form>
-    <ul data-todo-output class="todoList">
-      
-    </ul>
-    <template data-todo-template>
-      <li>
-        <label><input type="checkbox" name="completed"></label>
-      </li>
-    </template>
+    <p>Current Temp: <span data-weather="main.temp"></span>&deg; C</p>
+    <p>Min Temp: <span data-weather="main.temp_min"></span>&deg; C</p>
+    <p>Max Temp: <span data-weather="main.temp_max"></span>&deg; C</p>
+    <p>Feels Like: <span data-weather="main.feels_like"></span>&deg; C</p>
   </body>
 </html>
