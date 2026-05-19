@@ -15,6 +15,7 @@ export function TodoItem({ todo, onDeleteTodo }: Props) {
         'Content-Type': 'application/json',
       },
     });    
+    todo.completed = !todo.completed;
   }
 
   async function handleDeleteTodo(todo: Todo) {
