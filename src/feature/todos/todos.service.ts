@@ -5,7 +5,7 @@ import {
   createTodo as createTodoRepository,
   updateTodo as updateTodoRepository,
   deleteTodo as deleteTodoRepository
-} from './todos.repository.ts';
+} from './todos.db.repository.ts';
 import type { Todo } from './types.ts';
 
 export async function getTodos() {

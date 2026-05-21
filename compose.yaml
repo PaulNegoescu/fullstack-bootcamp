@@ -7,7 +7,11 @@ services:
     environment:
       PORT: 3000
       NODE_ENV: development
+      DATABASE_URL: postgres://todos_user:todos_password@db:5432/todos_db
     command: pnpm run dev
+    depends_on:
+      db:
+        condition: service_healthy
     develop:
       watch:
         - action: sync
@@ -17,3 +21,25 @@ services:
           path: ./package.json
         - action: rebuild
           path: ./pnpm-lock.yaml
+  
+  db: 
+    image: postgres:18
+    environment:
+      POSTGRES_USER: todos_user
+      POSTGRES_PASSWORD: todos_password
+      POSTGRES_DB: todos_db
+    ports: 
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./db/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U todos_user -d todos_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data: {}
+
+

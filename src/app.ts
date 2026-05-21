@@ -1,5 +1,6 @@
 import express, { type Request, type Response, type NextFunction } from 'express';
 import { todosRouter } from './feature/todos/todos.routes.ts';
+import { pool } from './db/pool.ts';
 
 export const app = express();
 
@@ -13,6 +14,19 @@ app.get('/health', (_req, res) => {
   res.json({
     status: 'ok',
   });
+});
+
+app.get('/health/db', async (_req, res, next) => {
+  try {
+    const result = await pool.query('SELECT now() AS current_time');
+
+    res.json({
+      status: 'ok',
+      databaseTime: result.rows[0].current_time,
+    });
+  } catch (error) {
+    next(error);
+  }
 });
 
 app.use('/todos', todosRouter);

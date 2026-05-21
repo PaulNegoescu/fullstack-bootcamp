@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts":  {
+  "scripts": {
     "dev": "nodemon --exec node src/server.ts",
     "start": "node src/server.ts"
   },
@@ -17,11 +17,13 @@
   },
   "type": "module",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg": "^8.21.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^20.14.2",
+    "@types/pg": "^8.20.0",
     "nodemon": "^3.1.14"
   }
 }
